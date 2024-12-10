@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # holbertonschool-binary_trees
 
 projet d'implémentation d'un arbres binaires.
@@ -5,6 +6,9 @@ projet d'implémentation d'un arbres binaires.
 ---
 
 # Arbres Binaires en C
+=======
+ Arbres Binaires en C
+>>>>>>> 080a72e (0-binary_tree_node.c)
 
 ## Description
 
@@ -181,8 +185,12 @@ Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce proje
 5. Poussez votre branche (`git push origin feature/nouvelle-fonctionnalite`).
 6. Créez une Pull Request pour proposer vos changements.
 
+<<<<<<< HEAD
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
+=======
+
+>>>>>>> 080a72e (0-binary_tree_node.c)
