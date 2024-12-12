@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_balance - Meseaure factor balance of a binary tre> * @tree: pointer to the root node.
+ * binary_tree_balance - Meseaure factor balance of a binary tree
+ * @tree: pointer to the root node.
  *
  * Return: the factor balance of the binary tree.
  */
