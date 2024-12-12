@@ -1,45 +1,41 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - Measures the height of a binary tree.
- * @tree: A pointer to the root node of the tree.
+ * binary_tree_balance - Meseaure factor balance of a binary tre> * @tree: pointer to the root node.
  *
- * Return: The height of the tree, or 0 if the tree is NULL.
- */
-size_t binary_tree_height(const binary_tree_t *tree)
-{
-	size_t left_height,right_height;
-
-	if (tree == NULL)
-		return (0);
-
-	/* Recursively calculate the height of the left and right subtrees */
-	left_height = binary_tree_height(tree->left);
-	right_height = binary_tree_height(tree->right);
-
-	/* Return the greater height plus 1 for the current node */
-	return (1 + (left_height > right_height ? left_height : right_height));
-}
-
-/**
- * binary_tree_balance - Measures the balance factor of a binary tree.
- * @tree: A pointer to the root node of the tree.
- *
- * Return: The balance factor of the tree, or 0 if the tree is NULL.
+ * Return: the factor balance of the binary tree.
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
 
-	size_t left_height,right_height;
+	if (tree)
+	{
+		size_t l, r;
 
-	if (tree == NULL)
-		return (0);
+		l = binary_tree_height(tree->left);
+		r = binary_tree_height(tree->right);
+		return (l - r);
+	}
 
-	/* Calculate the balance factor as the height of the left subtree minus*/
-	/*	   the height of the right subtree */
-	left_height = binary_tree_height(tree->left);
-	right_height = binary_tree_height(tree->right);
+	return (0);
+}
 
-	return (left_height - right_height);
+/**
+ * binary_tree_height - Measures the height of a binary tree.
+ * @tree: A pointer to the root node of the tree to measure the height.
+ *
+ * Return: If tree is NULL, your function must return 0, else return height.
+ */
+size_t binary_tree_height(const binary_tree_t *tree)
+{
+	if (tree)
+	{
+		size_t l = 0, r = 0;
+
+		l = tree->left ? 1 + binary_tree_height(tree->left) : 1;
+		r = tree->right ? 1 + binary_tree_height(tree->right) : 1;
+		return ((l > r) ? l : r);
+	}
+	return (0);
 }
 
